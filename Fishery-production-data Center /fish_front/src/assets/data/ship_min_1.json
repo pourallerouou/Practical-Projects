@@ -1,0 +1,38 @@
+{
+    "code":0,
+    "msg":"",
+    "count": 8,
+    "data":[{
+        "ship_id":"ZY-00067",
+        "ship_intro":"6000吨 舟山国际"
+    },
+    {
+        "ship_id":"ZY-00067",
+        "ship_intro":"20000吨 舟山国际"
+    },
+    {
+        "ship_id":"ZY-00067",
+        "ship_intro":"15000吨 舟山国际"
+    },
+    {
+        "ship_id":"ZY-00067",
+        "ship_intro":"3000吨 舟山国际"
+    },
+    {
+        "ship_id":"ZY-00067",
+        "ship_intro":"20000吨 舟山国际"
+    },
+    {
+        "ship_id":"ZY-00067",
+        "ship_intro":"6000吨 舟山国际"
+    },
+    {
+        "ship_id":"ZY-00067",
+        "ship_intro":"9000吨 舟山国际"
+    },
+    {
+        "ship_id":"ZY-00067",
+        "ship_intro":"9600吨 舟山国际"
+    }
+    ]
+}

@@ -1,0 +1,98 @@
+{
+    "code":0,
+    "msg":"",
+    "count": 7,
+    "data":[{
+        "fsy_id":"Z00001",
+        "fsy_name":"普陀渔场",
+        "fsy_area": 5300,
+        "fsy_deep": 50,
+        "fsy_bottom":"沙质",
+        "fsy_resource":"浅海鱼类 贝类",
+        "fsy_opeart":"混合经营",
+        "fsy_output":"50000",
+        "fsy_value":"8000",
+        "fsy_admin":"李来",
+        "fsy_phone":13628738221
+    },
+    {
+        "fsy_id":"Z00041",
+        "fsy_name":"定海渔场",
+        "fsy_area": 2800,
+        "fsy_deep": 65,
+        "fsy_bottom":"沙质",
+        "fsy_resource":"浅海鱼类 贝类",
+        "fsy_opeart":"捕捞渔业",
+        "fsy_output":"28000",
+        "fsy_value":"4000",
+        "fsy_admin":"王宇",
+        "fsy_phone":13378137823
+    },
+    {
+        "fsy_id":"Z00431",
+        "fsy_name":"岱山渔场",
+        "fsy_area": 6600,
+        "fsy_deep": 49,
+        "fsy_bottom":"沙质",
+        "fsy_resource":"浅海鱼类 贝类",
+        "fsy_opeart":"混合经营",
+        "fsy_output":"60000",
+        "fsy_value":"5700",
+        "fsy_admin":"程曦", 
+        "fsy_phone":17281638812
+    },
+    {
+        "fsy_id":"Z00739",
+        "fsy_name":"沈家湾渔场",
+        "fsy_area": 18300,
+        "fsy_deep": 73,
+        "fsy_bottom":"沙质、岩石",
+        "fsy_resource":"浅海鱼类 贝类 蟹类",
+        "fsy_opeart":"混合经营",
+        "fsy_output":"950000",
+        "fsy_value":"78000",
+        "fsy_admin":"张桓宇",
+        "fsy_phone":13789197973
+    },
+    {
+        "fsy_id":"Z33491",
+        "fsy_name":"朱家尖渔场",
+        "fsy_area": 52300,
+        "fsy_deep": 56,
+        "fsy_bottom":"沙质",
+        "fsy_resource":"浅海鱼类 贝类 蟹类",
+        "fsy_opeart":"混合经营",
+        "fsy_output":"750000",
+        "fsy_value":"68000",
+        "fsy_admin":"林伟",
+        "fsy_phone":17982789122
+    },
+    {
+        "fsy_id":"Z00361",
+        "fsy_name":"高亭渔场",
+        "fsy_area": 6300,
+        "fsy_deep": 78,
+        "fsy_bottom":"沙质",
+        "fsy_resource":"浅海鱼类",
+        "fsy_opeart":"混合经营",
+        "fsy_output":"43000",
+        "fsy_value":"9800",
+        "fsy_admin":"高平",
+        "fsy_phone":18291728133
+    },
+    {
+        "fsy_id":"Z01331",
+        "fsy_name":"普陀渔场",
+        "fsy_area": 7300,
+        "fsy_deep": 48,
+        "fsy_bottom":"沙质",
+        "fsy_resource":"浅海鱼类 贝类",
+        "fsy_opeart":"混合经营",
+        "fsy_output":"45000",
+        "fsy_value":"8600",
+        "fsy_admin":"苏丽",
+        "fsy_phone":16787391233
+    }
+   
+    ]
+}

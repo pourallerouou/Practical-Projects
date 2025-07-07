@@ -1,0 +1,30 @@
+{
+    "code":0,
+    "msg":"",
+    "count": 6,
+    "data":[{
+        "data_item":"浊度",
+        "data_value":"0.1"
+    },
+    {
+        "data_item":"高锰酸钾",
+        "data_value":"1.65mg/L"
+    },
+    {
+        "data_item":"PH",
+        "data_value":"8.43"
+    },
+    {
+        "data_item":"氢氯",
+        "data_value":"0.024mg/L"
+    },
+    {
+        "data_item":"总氯",
+        "data_value":"0.68mg/L"
+    },
+    {
+        "data_item":"水温",
+        "data_value":"20C°"
+    }
+    ]
+}

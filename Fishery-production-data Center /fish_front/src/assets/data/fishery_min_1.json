@@ -1,0 +1,34 @@
+{
+    "code":0,
+    "msg":"",
+    "count": 7,
+    "data":[{
+        "fsy_name":"普陀渔场",
+        "fsy_output": 230
+    },
+    {
+        "fsy_name":"定海渔场",
+        "fsy_output": 240
+    },
+    {
+        "fsy_name":"岱山渔场",
+        "fsy_output": 240
+    },
+    {
+        "fsy_name":"沈家湾渔场",
+        "fsy_output": 630
+    },
+    {
+        "fsy_name":"朱家尖渔场",
+        "fsy_output": 680
+    },
+    {
+        "fsy_name":"高亭渔场",
+        "fsy_output": 270
+    },
+    {
+        "fsy_name":"南洞渔场",
+        "fsy_output": 230
+    }  
+    ]
+}

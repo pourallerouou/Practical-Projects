@@ -1,0 +1,43 @@
+{
+    "code":0,
+    "msg":"",
+    "count": 6,
+    "data":[{
+        "fish_coord":"30.192199710160608, 122.20510089716119",
+        "fish_variety":"鲳鱼",
+        "fish_amount":"30",
+        "fish_trend":"East"
+    },
+    {
+        "fish_coord":"30.192199710160608, 122.20510089716119",
+        "fish_variety":"小黄鱼",
+        "fish_amount":"28",
+        "fish_trend":"Northwest"
+    },
+    {
+        "fish_coord":"30.192199710160608, 122.20510089716119",
+        "fish_variety":"海鱼",
+        "fish_amount":"67",
+        "fish_trend":"East"
+    },
+    {
+        "fish_coord":"30.192199710160608, 122.20510089716119",
+        "fish_variety":"鳕鱼",
+        "fish_amount":"30",
+        "fish_trend":"East"
+    },
+    {
+        "fish_coord":"30.192199710160608, 122.20510089716119",
+        "fish_variety":"鲳鱼",
+        "fish_amount":"30",
+        "fish_trend":"Northwest"
+    },
+    {
+        "fish_coord":"30.192199710160608, 122.20510089716119",
+        "fish_variety":"鲳鱼",
+        "fish_amount":"30",
+        "fish_trend":"East"
+    }
+
+    ]
+}
