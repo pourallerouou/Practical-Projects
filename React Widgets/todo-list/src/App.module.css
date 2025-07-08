@@ -1,0 +1,105 @@
+/* 给body设置全屏及居中 */
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center; /* 水平居中 */
+  align-items: flex-start; /* 顶部对齐，改成center就是垂直居中 */
+  background-color: #ffffff;
+  font-family: Arial, sans-serif;
+}
+
+/* App.module.css */
+.container {
+  width: 600px;
+  margin-top: 40px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 16px;
+  color: #1e40af; /* 蓝色 */
+}
+
+.inputArea {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.inputBox {
+  flex: 1;
+  padding: 8px;
+  font-size: 16px;
+}
+
+.addButton {
+  padding: 8px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+.taskList {
+  list-style: none;
+  padding-left: 0;
+}
+
+.taskItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f9fafb;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  padding: 8px;
+}
+
+.taskText {
+  cursor: pointer;
+  flex: 1;
+}
+
+.completed {
+  color: #9ca3af;
+  text-decoration: line-through;
+  background-color: #f3f4f6;
+}
+
+.deleteButton {
+  background-color: #dc2626;
+  color: white;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.filterArea {
+  margin-bottom: 12px;
+  display: flex;
+  gap: 8px;
+}
+
+.filterButton {
+  cursor: pointer;
+  padding: 6px 12px;
+  border-radius: 4px;
+  border: 1px solid #3b82f6;
+  background-color: white;
+  color: #3b82f6;
+  font-weight: 500;
+}
+
+.filterButtonActive {
+  background-color: #3b82f6;
+  color: white;
+}
