@@ -10,9 +10,29 @@ function App() {
         minHeight: '100vh',
         display: 'flex',
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        position: 'relative'
       }}
     >
+      {/* 学生管理图标按钮 */}
+      <Link to="/students">
+        <button
+          style={{
+            position: 'absolute',
+            top: 30,
+            right: 40,
+            background: 'none',
+            border: 'none',
+            cursor: 'pointer',
+            fontSize: 28,
+            color: '#3b82f6',
+            zIndex: 10
+          }}
+          title="学生信息管理"
+        >
+          <span role="img" aria-label="学生管理">👥</span>
+        </button>
+      </Link>
       <div
         style={{
           backgroundColor: 'rgba(255, 255, 255, 0.85)',
@@ -39,7 +59,7 @@ function App() {
               onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
               onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
             >
-              人脸识别签到
+              人脸识别
             </button>
           </Link>
           <Link to="/history">
@@ -48,7 +68,16 @@ function App() {
               onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
               onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
             >
-              历史签到记录
+              历史记录
+            </button>
+          </Link>
+          <Link to="/register-face">
+            <button
+              style={buttonStyle}
+              onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
+              onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
+            >
+              录入人脸
             </button>
           </Link>
         </div>

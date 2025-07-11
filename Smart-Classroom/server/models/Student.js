@@ -5,7 +5,8 @@ const StudentSchema = new mongoose.Schema({
   name: { type: String, required: true },
   class: { type: String },
   gender: { type: String, enum: ['男', '女'], default: '男' },
-  faceRegistered: { type: Boolean, default: false }
+  faceRegistered: { type: Boolean, default: false },
+  descriptor: { type: [Number] } // 人脸特征向量
 })
 
 module.exports = mongoose.model('Student', StudentSchema)

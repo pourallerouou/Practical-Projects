@@ -37,7 +37,7 @@ router.get('/', async (req, res) => {
 // PATCH /api/checkin/:id/student/:studentId
 router.patch('/:id/student/:studentId', async (req, res) => {
   const { id, studentId } = req.params
-  const { present } = req.body
+  const { present, name } = req.body
 
   try {
     const record = await CheckinRecord.findById(id)
@@ -45,12 +45,13 @@ router.patch('/:id/student/:studentId', async (req, res) => {
       return res.status(404).json({ error: '签到记录不存在' })
     }
 
-    const student = record.students.find(s => s.studentId === studentId)
+    let student = record.students.find(s => s.studentId === studentId)
     if (!student) {
-      return res.status(404).json({ error: '该学生不在记录中' })
+      // 如果学生不在记录中，补充进 students 数组
+      record.students.push({ studentId, name: name || '', present })
+    } else {
+      student.present = present
     }
-
-    student.present = present
     await record.save()
 
     res.json({ message: '签到状态已更新' })

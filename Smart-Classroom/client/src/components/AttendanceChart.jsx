@@ -3,12 +3,13 @@ import {
   BarChart, Bar, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer
 } from 'recharts'
 
-export default function AttendanceChart({ records }) {
+export default function AttendanceChart({ records, allStudents = [] }) {
   const chartData = records.map((r, i) => {
     const date = new Date(r.timestamp).toLocaleDateString()
+    // 统计 present
     const present = r.students.filter(s => s.present).length
-    const absent = r.students.length - present
-
+    // 缺勤 = 总学生数 - 到课
+    const absent = allStudents.length > 0 ? allStudents.length - present : r.students.length - present
     return {
       name: `#${i + 1} ${date}`,
       到课: present,

@@ -1,48 +1,107 @@
-# 智慧课堂签到系统
+# Smart Classroom 项目架构与技术栈分析
 
-### 项目结构
+## 项目简介
+
+本项目是一个“智慧教室”签到系统，包含前端（React）和后端（Node.js/Express/MongoDB）两部分，支持人脸识别签到、学生信息管理、历史记录与数据可视化等功能。
+
+---
+
+## 目录结构
+
+```
 Smart-Classroom/
-├── client/   # 前端React项目
-│   ├── src/
-│   │   ├── components/   # 复用组件（如考勤图表、记录项等）
-│   │   ├── pages/        # 页面（如手动签到、历史记录、人脸签到等）
-│   │   ├── video/ image/ # 静态资源
-│   │   ├── App.jsx       # 路由和主入口
-│   │   └── main.jsx      # 应用入口
-│   ├── public/           # 公共资源
-│   ├── package.json      # 前端依赖与脚本
-│   └── ...               # 配置文件等
-├── server/   # 后端Node.js项目
-│   ├── routes/           # 路由（如checkin、students）
-│   ├── models/           # 数据模型（如CheckinRecord、Student）
-│   ├── index.js          # 服务入口
-│   ├── seed.js           # 数据初始化脚本
-│   ├── package.json      # 后端依赖
-│   └── ...               # 其他
-└── readme.md
+├── client/                        # 前端（React 19 + Vite）
+│   ├── package.json               # 前端依赖与脚本
+│   ├── vite.config.js             # Vite 配置
+│   ├── README.md                  # 前端说明文档
+│   ├── public/                    # 公共资源
+│   │   └── models/                # face-api.js 人脸识别模型文件
+│   └── src/                       # 源码目录
+│       ├── App.jsx                # 路由与全局布局
+│       ├── main.jsx               # 入口文件
+│       ├── index.css              # 全局样式
+│       ├── image/                 # 背景与装饰图片
+│       │   ├── white puzzle.jpg
+│       │   ├── white paintings.jpg
+│       │   ├── white light.jpg
+│       │   ├── white clock.jpg
+│       │   └── white2.jpg
+│       ├── video/                 # 视频或模型资源（如有）
+│       ├── pages/                 # 页面组件
+│       │   ├── FaceCheckin.jsx    # 人脸签到页
+│       │   ├── FaceRegister.jsx   # 人脸注册页
+│       │   ├── History.jsx        # 历史记录页
+│       │   ├── ManualCheckin.jsx  # 手动签到页
+│       │   └── StudentManager.jsx # 学生管理页
+│       └── components/            # 可复用组件
+│           ├── AttendanceChart.jsx    # 出勤率图表
+│           ├── FaceRegisterModal.jsx  # 人脸注册弹窗
+│           └── RecordItem.jsx         # 单条签到记录展示
+├── server/                        # 后端（Express + Mongoose）
+│   ├── package.json               # 后端依赖与脚本
+│   ├── index.js                   # 服务入口
+│   ├── seed.js                    # 数据初始化脚本
+│   ├── routes/                    # 路由
+│   │   ├── students.js            # 学生相关 API
+│   │   └── checkin.js             # 签到相关 API
+│   └── models/                    # 数据模型
+│       ├── Student.js             # 学生模型
+│       └── CheckinRecord.js       # 签到记录模型
+└── PROJECT_OVERVIEW.md            # 项目架构与说明
+```
 
-### 技术栈说明
+---
 
-·前端（client）
-React 19：主流前端框架，负责页面渲染和组件化开发。
-Vite：新一代前端构建工具，开发体验快，支持热更新。
-React Router DOM 7：实现前端路由和页面切换。
-Axios：进行前后端 HTTP 通信。
-Recharts：用于数据可视化（如签到统计图表）。
-ESLint：代码规范和质量保障。
-TypeScript 类型声明（@types/react等）：提升开发体验（但主代码为JSX）。
+## 技术栈
 
-·后端（server）
-Node.js + Express 5：主流Web服务框架，负责API接口。
-Mongoose 8：MongoDB对象建模，简化数据库操作。
-CORS：跨域资源共享，支持前后端分离部署。
+### 前端
 
-### 项目特点
-  前后端分离，结构清晰：便于团队协作和独立部署。
-功能模块化：
-  前端页面分为手动签到、历史记录、人脸签到（预留），组件复用性好。
-  后端路由和数据模型分离，接口清晰。
-  数据可视化：使用 Recharts 展示签到历史，提升用户体验。
-  接口设计合理：支持签到记录的增删查改（POST/GET/PATCH/DELETE），便于后续扩展。
-  良好的用户交互体验：如手动签到流程友好，签到完成后有结果反馈。
-  代码规范：引入 ESLint 保证代码风格统一。
+- **React 19**：构建响应式 UI
+- **Vite**：极速开发与构建工具
+- **React Router v7**：前端路由
+- **Axios**：HTTP 请求
+- **Recharts**：数据可视化（出勤率等）
+- **face-api.js**：人脸检测与识别
+- **ESLint**：代码质量保障
+
+### 后端
+
+- **Node.js + Express**：RESTful API 服务
+- **Mongoose**：MongoDB ODM，数据建模
+- **MongoDB**：数据存储
+- **CORS**：跨域资源共享
+
+---
+
+## 主要功能与亮点
+
+### 1. 人脸识别签到
+- 前端集成 `face-api.js`，支持摄像头实时检测与人脸特征提取。
+- 支持学生人脸注册与签到比对，提升签到效率与准确性。
+
+### 2. 学生信息管理
+- 支持学生的增删改查（CRUD），可查看人脸录入状态。
+- 人脸注册支持弹窗式交互，体验友好。
+
+### 3. 历史记录与数据可视化
+- 历史签到记录支持滚动展示，顶部统计图表固定，便于数据分析。
+- 出勤率等数据通过柱状图直观展示。
+
+### 4. 现代化 UI/UX
+- 采用卡片式布局与渐变背景，界面美观。
+- 响应式设计，适配不同屏幕。
+- 重要操作（如删除、录入人脸）有确认提示，防止误操作。
+
+### 5. 代码结构清晰
+- 前后端分离，接口清晰，易于维护和扩展。
+- 组件化开发，复用性高。
+
+---
+
+## 可扩展性
+
+- 增加权限与身份认证（如教师/管理员登录）
+- 支持批量导入学生信息
+- 增加签到异常提醒与统计
+- 部署上线与移动端适配
+
